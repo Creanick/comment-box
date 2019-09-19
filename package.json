@@ -2,6 +2,7 @@
   "name": "comment-box",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://creanick.github.io/comment-box",
   "dependencies": {
     "avataaars": "^1.2.1",
     "react": "^16.9.0",
@@ -12,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "rimraf build && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "rimraf": "^3.0.0"
   }
 }
