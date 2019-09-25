@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App-manick">
       <RandomAvatar size={80} />
     </div>
   );
