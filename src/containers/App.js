@@ -1,5 +1,4 @@
 import React from "react";
-import RandomAvatar from "../components/RandomAvatar";
 import "./App.css";
 
 function App() {
