@@ -15,7 +15,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "rimraf build && npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +35,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "gh-pages": "^2.1.1",
     "rimraf": "^3.0.0"
   }
