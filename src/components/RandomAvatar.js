@@ -116,9 +116,9 @@ export const randomStyleGenerator = () => {
 };
 const staticStyle = randomStyleGenerator();
 function RandomAvatar(props) {
-  const { size = 100, onClick = () => {}, style = staticStyle } = props;
+  const { size = 100, style = staticStyle, ...rest } = props;
   return (
-    <span onClick={onClick}>
+    <span {...rest}>
       <Avatar
         style={{ width: size + "px", height: size + "px" }}
         avatarStyle="Circle"
