@@ -33,12 +33,12 @@ function CommentAdder(props) {
                 <Grid item className={classes.grow}>
                     <Grid container spacing={2} direction="column">
                         <Grid item >
-                            <Input placeholder="Add your comment..." ref={comment} onChange={props.onCommentChange}/>
+                            <Input size={10} placeholder="Add your comment..." ref={comment} onChange={props.onCommentChange}/>
                         </Grid>
                         <Grid item>
                             <Grid container spacing={2}>
                                 <Grid item className={classes.grow}>
-                                    <Input placeholder="Enter Your Name" ref={name} onChange={props.onNameChange}/>
+                                    <Input size={10} placeholder="Enter Your Name" ref={name} onChange={props.onNameChange}/>
                                 </Grid>
                                 <Grid item>
                                     <SubmitButton>Submit</SubmitButton>
