@@ -1,4 +1,10 @@
-import { configure } from "@storybook/react";
+import React from "react";
+import { configure, addDecorator } from "@storybook/react";
+import "../src/index.css";
 
-// automatically import all files ending in *.stories.js
 configure(require.context("../src", true, /\.stories\.js$/), module);
+const styles = {
+  margin: "20px"
+};
+const CenterDecorator = storyFn => <div style={styles}>{storyFn()}</div>;
+addDecorator(CenterDecorator);
