@@ -1,3 +1,4 @@
 module.exports = {
-  avatarSize: 60
+  avatarSize: 60,
+  defaultSpace: 20
 };
