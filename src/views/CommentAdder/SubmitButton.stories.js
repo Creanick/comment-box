@@ -3,7 +3,7 @@ import { action } from "@storybook/addon-actions";
 import Button from "./SubmitButton";
 
 export default {
-  title: "Button"
+  title: "Component Adder|Button"
 };
 
 export const normalButton = () => (
