@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Avatar from "avataaars";
+import PropTypes from "prop-types";
 const randomArrayPicker = array => {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -116,16 +117,19 @@ export const randomStyleGenerator = () => {
 };
 const staticStyle = randomStyleGenerator();
 function RandomAvatar(props) {
-  const { size = 100, style = staticStyle, ...rest } = props;
+  const { size = 100, avatarStyle = staticStyle, ...rest } = props;
   return (
     <span {...rest}>
       <Avatar
         style={{ width: size + "px", height: size + "px" }}
         avatarStyle="Circle"
-        {...style}
+        {...avatarStyle}
       />
     </span>
   );
 }
-
+RandomAvatar.propTypes = {
+  size: PropTypes.number,
+  style: PropTypes.object
+};
 export default RandomAvatar;
