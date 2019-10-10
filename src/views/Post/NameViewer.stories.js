@@ -1,5 +1,6 @@
 import React from "react";
 import NameViewer from "./NameViewer";
+import { text, date } from "@storybook/addon-knobs";
 export default {
   title: "Post|Name Viewer"
 };
@@ -37,4 +38,9 @@ export const second = () => {
   const past = new Date();
   past.setSeconds(now.getSeconds() - 27);
   return <NameViewer name="Manick" date={past.toString()} />;
+};
+export const dynamic = () => {
+  const past = new Date();
+  past.setSeconds(now.getSeconds() - 27);
+  return <NameViewer name={text("Name", "Manick")} date={date("Date")} />;
 };

@@ -1,0 +1,17 @@
+.moreComment {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 11px;
+  color: #539afd;
+  cursor: pointer;
+  font-weight: bold;
+}
+.moreComment:hover {
+  text-decoration: underline;
+}
+
+.commentCount {
+  font-size: 10px;
+  color: grey;
+  font-weight: bold;
+}
