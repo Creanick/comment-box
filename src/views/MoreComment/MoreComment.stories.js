@@ -3,7 +3,7 @@ import MoreComment from "./MoreComment";
 import { action } from "@storybook/addon-actions";
 
 export default {
-  title: "More Comment"
+  title: "Basic|More Comment"
 };
 
 export const zeroComment = () => (
