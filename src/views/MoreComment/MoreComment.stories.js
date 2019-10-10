@@ -1,5 +1,5 @@
 import React from "react";
-import MoreComment from "./MoreComment";
+import MoreComment from "./index";
 import { action } from "@storybook/addon-actions";
 import { number } from "@storybook/addon-knobs";
 export default {
