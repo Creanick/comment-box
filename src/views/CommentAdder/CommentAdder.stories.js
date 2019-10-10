@@ -1,5 +1,5 @@
 import React from "react";
-import CommentAdder from "./CommentAdder";
+import CommentAdder from "./index";
 import { action } from "@storybook/addon-actions";
 import { randomStyleGenerator } from "../../components/RandomAvatar";
 export default {
