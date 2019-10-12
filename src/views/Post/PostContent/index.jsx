@@ -1,5 +1,23 @@
 import React,{useState} from 'react'
+import {ReactComponent as Delete} from '../../../assets/icons/delete.svg'
 import styled from 'styled-components'
+const CloseContent = styled.div`
+    background: #FF4D4D;
+    color: white;
+    text-align: right;
+    padding: 6px;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: translate(-10px,0px);
+    &:hover{
+        background: red;
+    }
+`
 const Content = styled.p`
     background: #eee;
     padding: 10px 16px;
@@ -9,6 +27,8 @@ const Content = styled.p`
     line-height: 1.5rem;
     font-weight: 500;
     color: #5d5d5d;
+    z-index: 100;
+    position: relative;
     .moreContent{
         color: #4593FF;
         font-size: 12px;
@@ -18,7 +38,14 @@ const Content = styled.p`
         }
     }
 `
-function PostContent({children,dangerLength=200,compressLength=100}) {
+const ContentWrapper = styled.div`
+    position: relative;
+    cursor: pointer;
+    &:hover ${CloseContent}{
+        transform: translate(20px,0px);
+    }
+`
+function PostContent({children,dangerLength=200,compressLength=100,onDeleteClick}) {
     const [expand, setExpand] = useState(false)
     const isMoreAvailable = children.length > dangerLength;
     let moreContent = null;
@@ -30,9 +57,10 @@ function PostContent({children,dangerLength=200,compressLength=100}) {
         )
     }
     return children.length > 0?(
-        <div>
+        <ContentWrapper >
             <Content>{isMoreAvailable?(expand?children:children.slice(0,compressLength)):children}{moreContent}</Content>
-        </div>
+            <CloseContent onClick={onDeleteClick}><Delete width={10}/></CloseContent>
+        </ContentWrapper>
     ):null
 }
 
