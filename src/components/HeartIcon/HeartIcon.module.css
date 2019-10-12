@@ -1,0 +1,14 @@
+.solid {
+  opacity: 0;
+  transition: all 0.2s;
+}
+.heartIcon:hover .solid {
+  opacity: 1;
+}
+.heartIcon:active {
+  transform: scale(1.08, 1.08);
+}
+.heartIcon {
+  cursor: pointer;
+  transition: all 0.2s;
+}
