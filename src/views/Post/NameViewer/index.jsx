@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
-import diffDate from '../../utils/diffDate';
+import diffDate from '../../../utils/diffDate';
 const NameWrapper = styled.div`
     & .postName{
         font-size: 15px;

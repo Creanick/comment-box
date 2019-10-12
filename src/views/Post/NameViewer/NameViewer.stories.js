@@ -1,5 +1,5 @@
 import React from "react";
-import NameViewer from "./NameViewer";
+import NameViewer from ".";
 import { text, date } from "@storybook/addon-knobs";
 export default {
   title: "Post|Name Viewer"
