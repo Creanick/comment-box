@@ -13,7 +13,7 @@ const useStyles = makeStyles(()=>createStyles(
         commentIconBox:{
             background: "#eee",
             borderRadius: "25px",
-            padding: "4px 10px",
+            padding: "3px 12px 2px",
             cursor: "pointer",
             transition:"all 0.3s",
             "&:hover":{
