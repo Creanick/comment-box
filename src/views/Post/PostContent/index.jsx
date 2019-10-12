@@ -6,7 +6,7 @@ const CloseContent = styled.div`
     color: white;
     text-align: right;
     padding: 8px 8px 6px;
-    border-radius: 4px;
+    border-radius: 10px;
     position: absolute;
     right: 0;
     top:0;
