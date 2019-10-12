@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Grid} from '@material-ui/core';
 import { makeStyles ,createStyles} from '@material-ui/core/styles';
 import HeartIcon from "../../../components/HeartIcon/";
@@ -58,5 +59,12 @@ function InteractionBar({likes=0,comments=0,liked,onLikeClick,onCommentClick,onR
         </Grid>
     )
 }
-
+InteractionBar.propTypes = {
+    likes: PropTypes.number,
+    comments: PropTypes.number,
+    liked:PropTypes.bool,
+    onLikeClick:PropTypes.func,
+    onCommentClick: PropTypes.func,
+    onReplyClick: PropTypes.func
+}
 export default InteractionBar
