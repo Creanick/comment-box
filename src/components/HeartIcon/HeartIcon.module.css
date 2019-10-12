@@ -1,0 +1,9 @@
+.heartIcon:active {
+  transform: scale(1.08, 1.08);
+}
+.heartIcon {
+  cursor: pointer;
+}
+.heartIcon:hover .solid {
+  opacity: 1;
+}
