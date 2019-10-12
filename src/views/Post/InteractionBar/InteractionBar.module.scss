@@ -1,0 +1,32 @@
+.interactionFont {
+  font-size: 14px;
+  font-weight: 600;
+  color: grey;
+  vertical-align: center;
+  transition: all 0.3s;
+}
+.reply {
+  text-align: right;
+  display: block;
+  span {
+    color: #4593ff;
+    cursor: pointer;
+    &:hover {
+      color: rgb(16, 115, 253);
+      text-decoration: underline;
+    }
+  }
+}
+.commentIconBox {
+  &:active {
+    transform: scale(1.08, 1.08);
+  }
+  &:hover {
+    .interactionFont {
+      color: white;
+    }
+    svg path {
+      fill: white;
+    }
+  }
+}
