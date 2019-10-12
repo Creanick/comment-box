@@ -3,7 +3,8 @@ import { text } from "@storybook/addon-knobs";
 import PostContent from "./index";
 
 export default {
-  title: "Post|Post Content"
+  title: "Post|Post Content",
+  decorators: [storyFn => <div style={{ margin: "100px" }}>{storyFn()}</div>]
 };
 
 export const normal = () => <PostContent>Hi My name is Manick</PostContent>;
