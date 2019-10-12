@@ -5,7 +5,7 @@ const CloseContent = styled.div`
     background: #FF4D4D;
     color: white;
     text-align: right;
-    padding: 6px;
+    padding: 8px 8px 6px;
     border-radius: 4px;
     position: absolute;
     right: 0;
@@ -42,7 +42,7 @@ const ContentWrapper = styled.div`
     position: relative;
     cursor: pointer;
     &:hover ${CloseContent}{
-        transform: translate(20px,0px);
+        transform: translate(24px,0px);
     }
 `
 function PostContent({children,dangerLength=200,compressLength=100,onDeleteClick}) {
