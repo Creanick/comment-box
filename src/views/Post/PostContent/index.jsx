@@ -20,8 +20,8 @@ const CloseContent = styled.div`
     }
 `
 const Content = styled.p`
-    background: #eee;
-    background: ${props=>props.color?props.color:"#eee"};
+    background: #F8F8F8;
+    background: ${props=>props.color?props.color:"#F8F8F8"};
     padding: 10px 16px;
     border-radius: 0px 10px 10px;
     margin: 0;
