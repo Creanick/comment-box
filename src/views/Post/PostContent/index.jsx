@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import PropTypes from 'prop-types'
 import {ReactComponent as Delete} from '../../../assets/icons/delete.svg'
 import styled from 'styled-components'
 const CloseContent = styled.div`
@@ -64,5 +65,11 @@ function PostContent({color,children,dangerLength=200,compressLength=100,onDelet
         </ContentWrapper>
     ):null
 }
-
+PostContent.propTypes = {
+    color:PropTypes.string,
+    children:PropTypes.string,
+    dangerLength:PropTypes.number,
+    compressLength: PropTypes.number,
+    onDeleteClick: PropTypes.func
+}
 export default PostContent
