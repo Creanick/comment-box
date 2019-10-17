@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {ReactComponent as Delete} from '../../../assets/icons/delete.svg'
 import styled from 'styled-components'
 const CloseContent = styled.div`
-    background: #FF4D4D;
+    background: #ffc0c0;
     color: white;
     text-align: right;
     padding: 8px 8px 6px;
@@ -61,7 +61,7 @@ function PostContent({color,children="",dangerLength=200,compressLength=100,onDe
     return children.length > 0?(
         <ContentWrapper >
             <Content color={color}>{isMoreAvailable?(expand?children:children.slice(0,compressLength)):children}{moreContent}</Content>
-            <CloseContent onClick={onDeleteClick}><Delete width={10}/></CloseContent>
+            <CloseContent onClick={onDeleteClick}><Delete fill="red" width={10}/></CloseContent>
         </ContentWrapper>
     ):null
 }
