@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "avataaars";
 import PropTypes from "prop-types";
+import config from "../config";
 const randomArrayPicker = array => {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -117,7 +118,11 @@ export const randomStyleGenerator = () => {
 };
 const staticStyle = randomStyleGenerator();
 function RandomAvatar(props) {
-  const { size = 100, avatarStyle = staticStyle, ...rest } = props;
+  const {
+    size = config.avatarSize,
+    avatarStyle = staticStyle,
+    ...rest
+  } = props;
   return (
     <span {...rest}>
       <Avatar
