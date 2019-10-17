@@ -47,7 +47,7 @@ const ContentWrapper = styled.div`
         transform: translate(24px,0px);
     }
 `
-function PostContent({color,children,dangerLength=200,compressLength=100,onDeleteClick}) {
+function PostContent({color,children="",dangerLength=200,compressLength=100,onDeleteClick}) {
     const [expand, setExpand] = useState(false)
     const isMoreAvailable = children.length > dangerLength;
     let moreContent = null;
