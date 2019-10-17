@@ -13,9 +13,24 @@ export const normal = () => (
     Hi My name is Manick
   </PostContent>
 );
+
 export const compressed = () => {
   return (
     <PostContent
+      onDeleteClick={action("deleted")}
+      compressLength={100}
+      dangerLength={150}
+    >
+      Hi there is manick lal jamadar working with comment box ui this is so must
+      work in a simple comment box design i thought it's lest time consuming but
+      it's not
+    </PostContent>
+  );
+};
+export const skyblue = () => {
+  return (
+    <PostContent
+      color="skyblue"
       onDeleteClick={action("deleted")}
       compressLength={100}
       dangerLength={150}

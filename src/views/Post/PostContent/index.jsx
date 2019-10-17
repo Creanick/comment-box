@@ -6,7 +6,7 @@ const CloseContent = styled.div`
     color: white;
     text-align: right;
     padding: 8px 8px 6px;
-    border-radius: 10px;
+    border-radius: 4px;
     position: absolute;
     right: 0;
     top:0;
@@ -20,6 +20,7 @@ const CloseContent = styled.div`
 `
 const Content = styled.p`
     background: #eee;
+    background: ${props=>props.color?props.color:"#eee"};
     padding: 10px 16px;
     border-radius: 0px 10px 10px;
     margin: 0;
@@ -45,7 +46,7 @@ const ContentWrapper = styled.div`
         transform: translate(24px,0px);
     }
 `
-function PostContent({children,dangerLength=200,compressLength=100,onDeleteClick}) {
+function PostContent({color,children,dangerLength=200,compressLength=100,onDeleteClick}) {
     const [expand, setExpand] = useState(false)
     const isMoreAvailable = children.length > dangerLength;
     let moreContent = null;
@@ -58,7 +59,7 @@ function PostContent({children,dangerLength=200,compressLength=100,onDeleteClick
     }
     return children.length > 0?(
         <ContentWrapper >
-            <Content>{isMoreAvailable?(expand?children:children.slice(0,compressLength)):children}{moreContent}</Content>
+            <Content color={color}>{isMoreAvailable?(expand?children:children.slice(0,compressLength)):children}{moreContent}</Content>
             <CloseContent onClick={onDeleteClick}><Delete width={10}/></CloseContent>
         </ContentWrapper>
     ):null
