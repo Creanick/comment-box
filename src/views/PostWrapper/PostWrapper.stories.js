@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "../Post";
 import PostWrapper from ".";
-
+import MoreComment from "../MoreComment";
 export default {
   title: "Post Wrapper"
 };
@@ -16,6 +16,7 @@ export const normal = () => (
           My name is manick lal jamadar, so i am creative human live in earth
           for long time
         </Post>
+        <MoreComment comment={{ total: 12, visible: 8 }} />
       </>
     )}
   </PostWrapper>
