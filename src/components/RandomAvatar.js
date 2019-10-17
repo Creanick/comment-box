@@ -116,8 +116,8 @@ export const randomStyleGenerator = () => {
     skinColor: randomArrayPicker(skins)
   };
 };
-const staticStyle = randomStyleGenerator();
 function RandomAvatar(props) {
+  const staticStyle = randomStyleGenerator();
   const {
     size = config.avatarSize,
     avatarStyle = staticStyle,
