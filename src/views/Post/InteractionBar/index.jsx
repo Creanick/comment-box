@@ -14,7 +14,7 @@ const useStyles = makeStyles(()=>createStyles(
         commentIconBox:{
             background: "#eee",
             borderRadius: "25px",
-            padding: "3px 12px 2px",
+            padding: "3px 6px 2px",
             cursor: "pointer",
             transition:"all 0.3s",
             "&:hover":{
@@ -30,7 +30,7 @@ const useStyles = makeStyles(()=>createStyles(
     ))
 function InteractionBar({likes=0,comments=0,liked,onLikeClick,onCommentClick,onReplyClick,...rest}) {
     const classes = useStyles()
-    const iconSize = 22;
+    const iconSize = 16;
     return (
         <Grid container spacing={2} alignItems="center" {...rest}>
             <Grid item>
