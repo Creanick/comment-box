@@ -12,7 +12,7 @@
              <Grid item>
                  <RandomAvatar style={postAvatarStyle} size={postAvatarSize}/>
              </Grid>
-             <Grid item>
+             <Grid item xs>
                  <Grid container spacing={2} direction="column">
                      <Grid item>
                         <NameViewer name={name} date={date}/>
