@@ -25,7 +25,7 @@ const Content = styled.p`
     padding: 10px 16px;
     border-radius: 0px 10px 10px;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5rem;
     font-weight: 500;
     color: #5d5d5d;
